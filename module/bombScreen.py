@@ -183,6 +183,10 @@ class Login:
                 if not click_when_target_appears("button_connect_wallet"):
                     refresh_page()
                     continue
+                logger_translated("account", LoggerEnum.BUTTON_CLICK)
+                if not click_when_target_appears("button_connect_wallet_meta"):
+                    refresh_page()
+                    continue
 
                 logger_translated("sigin wallet", LoggerEnum.BUTTON_CLICK)
                 if not click_when_target_appears("button_connect_wallet_sign"):
